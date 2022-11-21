@@ -13,6 +13,10 @@ const TodoSchema = new mongoose.Schema({
     enum: ['TODO', 'PROGRESS', 'DONE'],
     default: 'TODO',
     required: true
+  },
+  order: {
+    type: Number,
+    required: true
   }
 }, {
   timestamps: true
@@ -20,4 +24,7 @@ const TodoSchema = new mongoose.Schema({
 
 const TodoModel = mongoose.model('Todo', TodoSchema)
 
-module.exports = TodoModel
+module.exports = {
+  TodoModel,
+  TodoSchema
+}

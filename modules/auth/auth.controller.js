@@ -1,4 +1,4 @@
-const UserModel = require("./user")
+const { UserModel } = require("./user")
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
@@ -59,7 +59,6 @@ const getUserData = async (req, res) => {
     data: cloneUser
   })
 }
-
 
 module.exports = {
   register,
